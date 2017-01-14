@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var $hiddenSection = $('.hidden');
+  // var $hiddenSection = $('.hidden');
   var $window = $(window);
   $window.on('scroll load', check_if_in_view);
 
@@ -10,21 +10,32 @@ $(document).ready(function () {
     console.log('wspolrzedna gory okna'+windowTopPosition);
     var windowBottomPosition = (windowTopPosition + windowHeight);
     console.log('wspolrzedna dolu okna'+windowBottomPosition)
-    console.error('dupa');
+    console.error('</br>');
 
-    $.each($hiddenSection, function() {
-      var $element = $(this);
-      var elementHeight = $element.outerHeight();
-      var elementTopPosition = $element.offset().top;
-      var elementBottomPosition = (elementTopPosition + elementHeight);
+    // $.each($hiddenSection, function() {
+    //   var $element = $(this);
+    //   var elementHeight = $element.outerHeight();
+    //   var elementTopPosition = $element.offset().top;
+    //   var elementBottomPosition = (elementTopPosition + elementHeight);
 
       //check to see if this current container is within viewport
-      if ((elementBottomPosition >= windowTopPosition) &&
-        (elementTopPosition <= windowBottomPosition)) {
-        $element.toggleClass('visible');
-      } else {
+      // if ((elementBottomPosition >= windowTopPosition) &&
+      //   (elementTopPosition <= windowBottomPosition)) {
+      //   $element.toggleClass('visible');
+      // } else {
         // $element.removeClass('in-view');
-      }
-    });
+      // }
+    // }
+    // );
   }
 });
+
+
+
+function showDiv() {
+  $('.hidden').toggleClass('visible');
+  return false
+}
+
+
+$('body').one('scroll', showDiv)
