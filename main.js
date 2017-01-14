@@ -7,35 +7,22 @@ $(document).ready(function () {
     var windowHeight = $window.height();
     console.log('wysokosc okna'+windowHeight);
     var windowTopPosition = $window.scrollTop();
-    console.log('wspolrzedna gory okna'+windowTopPosition);
+    // console.log('wspolrzedna gory okna'+windowTopPosition);
     var windowBottomPosition = (windowTopPosition + windowHeight);
-    console.log('wspolrzedna dolu okna'+windowBottomPosition)
+    console.log('wspolrzedna dolu okna'+windowBottomPosition);
     console.error('</br>');
 
-    // $.each($hiddenSection, function() {
-    //   var $element = $(this);
-    //   var elementHeight = $element.outerHeight();
-    //   var elementTopPosition = $element.offset().top;
-    //   var elementBottomPosition = (elementTopPosition + elementHeight);
 
-      //check to see if this current container is within viewport
-      // if ((elementBottomPosition >= windowTopPosition) &&
-      //   (elementTopPosition <= windowBottomPosition)) {
-      //   $element.toggleClass('visible');
-      // } else {
-        // $element.removeClass('in-view');
-      // }
-    // }
-    // );
+    if (windowBottomPosition === windowHeight+2) {
+      $('.hidden').addClass('visible')
+    }
+
+
+
+
   }
+
 });
 
 
 
-function showDiv() {
-  $('.hidden').toggleClass('visible');
-  return false
-}
-
-
-$('body').one('scroll', showDiv)
