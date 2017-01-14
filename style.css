@@ -1,0 +1,39 @@
+h1, h2, h4, p {
+  margin:0;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(img/zdjecie1.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.background {
+  background-color: rgba(50,50,50,0.6);
+  overflow: hidden;
+
+}
+
+h1,h2, h4, p {
+  text-align: center;
+}
+
+header, .aboutMe, .education, .skills {
+  /*position: fixed;*/
+  /*right:-50px;*/
+  height: 100vh;
+}
+
+.hidden {
+  position: relative;
+  right: -500px;
+  height: 100vh;
+}
+
+.visible {
+  position: relative;
+  left: 0;
+  transition: 4s ease;
+}
