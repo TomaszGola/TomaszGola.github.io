@@ -1,28 +1,33 @@
 $(document).ready(function () {
-  // var $hiddenSection = $('.hidden');
   var $window = $(window);
   $window.on('scroll load', check_if_in_view);
 
   function check_if_in_view() {
     var windowHeight = $window.height();
-    console.log('wysokosc okna'+windowHeight);
     var windowTopPosition = $window.scrollTop();
-    // console.log('wspolrzedna gory okna'+windowTopPosition);
     var windowBottomPosition = (windowTopPosition + windowHeight);
-    console.log('wspolrzedna dolu okna'+windowBottomPosition);
-    console.error('</br>');
 
 
-    if (windowBottomPosition === windowHeight+2) {
-      $('.hidden').addClass('visible')
+    if (windowBottomPosition > windowHeight && windowBottomPosition < windowHeight*2 ) {
+      $('.aboutMe').stop().css({
+        marginRight: 0})
+    } else {
+      $('.aboutMe').stop().css({
+          marginRight: -250})
     }
-
-
-
-
+    if (windowBottomPosition > windowHeight*2 && windowBottomPosition < windowHeight*3 ) {
+      $('.education').stop().css({
+          marginLeft: 0})
+    } else {
+      $('.education').stop().css({
+          marginLeft: -250})
+    }
+    if (windowBottomPosition > windowHeight*3 && windowBottomPosition < windowHeight*4 ) {
+      $('.skills').stop().css({
+          marginRight: 0})
+    } else {
+      $('.skills').stop().css({
+          marginRight: -250})
+    }
   }
-
 });
-
-
-

@@ -26,14 +26,25 @@ header, .aboutMe, .education, .skills {
   height: 100vh;
 }
 
-.hidden {
-  position: relative;
-  right: -500px;
-  height: 100vh;
+.aboutMe, .skills {
+  width: 250px;
+  margin-left: auto;
+  margin-right: -250px;
+  transition: 2s;
+
 }
 
-.visible {
-  position: relative;
-  left: 0;
-  transition: 4s ease;
+.education {
+  width: 250px;
+  margin-left: -250px;
+  margin-right: auto;
+  transition: 2s;
 }
+
+.hidden {
+  position: relative;
+  height: 100vh;
+  transition: 2s;
+
+}
+
