@@ -22,7 +22,7 @@ $(document).ready(function () {
       $('.education').stop().css({
           marginLeft: -250})
     }
-    if (windowBottomPosition > windowHeight*3 && windowBottomPosition < windowHeight*4 ) {
+    if (windowBottomPosition > windowHeight*3 && windowBottomPosition < windowHeight*5 ) {
       $('.skills').stop().css({
           marginRight: 0})
     } else {

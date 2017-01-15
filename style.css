@@ -3,6 +3,30 @@ h1, h2, h4, p {
   padding: 20px;
 }
 
+h1:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right:1%;
+  height: 2px;
+  width: 70px;
+  margin: 0 10px;
+  display: inline-block;
+  background-color: #efc73c;
+}
+
+h1:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left:1%;
+  height: 2px;
+  width: 70px;
+  margin: 0 10px;
+  display: inline-block;
+  background-color: #efc73c;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,9 +45,10 @@ h1,h2, h4, p {
 }
 
 header, .aboutMe, .education, .skills {
-  /*position: fixed;*/
-  /*right:-50px;*/
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutMe, .skills {
