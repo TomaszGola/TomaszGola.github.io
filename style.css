@@ -1,4 +1,4 @@
-h1, h2, h4, p {
+h1, h2, h3, h4, p {
   margin:0;
   padding: 20px;
   text-align: center;
@@ -6,87 +6,87 @@ h1, h2, h4, p {
 
 h1 {
   font-size: 3em;
-  padding: 50px 0;
+  padding: 200px 0 50px;
 }
 
 h1:after {
   content: "";
-  position: absolute;
   top: 50%;
   right:100%;
-  height: 2px;
-  width: 70px;
-  margin: 0 10px;
+  height: 3px;
+  width: 130px;
+  margin: 13px;
   display: inline-block;
   background-color: #efc73c;
 }
 
 h1:before {
   content: "";
-  position: absolute;
   top: 50%;
   left:100%;
-  height: 2px;
+  height: 3px;
+  width: 130px;
+  margin: 13px;
+  display: inline-block;
+  background-color: #efc73c;
+}
+
+h2:after {
+  content: "";
+  top: 50%;
+  right:100%;
+  height: 3px;
   width: 70px;
-  margin: 0 10px;
+  margin: 5px;
+  display: inline-block;
+  background-color: #efc73c;
+}
+
+h2:before {
+  content: "";
+  top: 50%;
+  left:100%;
+  height: 3px;
+  width: 70px;
+  margin: 5px;
   display: inline-block;
   background-color: #efc73c;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: url(img/background2.png) no-repeat center center fixed;
-  background-size: cover;
+
 }
 
-.background {
-  background-color: rgba(50,50,50,0.6);
-  overflow: hidden;
+.spanContact {
+  content: "dupa";
+  height: 50px;
 }
 
 .contact {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content:space-around;
+  width:300px;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 50px;
+}
+
+.contact img {
+  padding: 0 20px;
 }
 
 
 header, .aboutMe, .education, .skills {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height:100vh;
 }
 
 .aboutMe, .skills {
-  border-top-left-radius: 400px;
-  border-bottom-left-radius: 400px;
-  border-left: solid #FF6C4C 5px;
-  width: 400px;
-  margin-left: auto;
-  margin-right: -400px;
-  transition: 2s;
-  background-color: rgba(255,210,110,0.6);
 
 }
 
 .education {
-  border-top-right-radius: 400px;
-  border-bottom-right-radius: 400px;
-  border-right: solid #FF6C4C 5px;
-  background-color: rgba(255,210,110,0.6);
-  width: 400px;
-  margin-left: -400px;
-  margin-right: auto;
-  transition: 2s;
+
 }
 
 .hidden {
-  position: relative;
-  height: 100vh;
-  transition: 2s;
 
 }
-
