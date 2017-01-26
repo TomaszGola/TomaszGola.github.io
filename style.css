@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to left top, #C837E8, #4865FF);
+}
+
 h1, h2, h3, h4, p {
   margin:0;
   padding: 20px;
@@ -5,7 +9,7 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   padding: 200px 0 50px;
 }
 
@@ -14,8 +18,8 @@ h1:after {
   top: 50%;
   right:100%;
   height: 3px;
-  width: 130px;
-  margin: 13px;
+  width: 50px;
+  margin: 8px;
   display: inline-block;
   background-color: #efc73c;
 }
@@ -25,8 +29,8 @@ h1:before {
   top: 50%;
   left:100%;
   height: 3px;
-  width: 130px;
-  margin: 13px;
+  width: 50px;
+  margin: 8px;
   display: inline-block;
   background-color: #efc73c;
 }
@@ -36,7 +40,7 @@ h2:after {
   top: 50%;
   right:100%;
   height: 3px;
-  width: 70px;
+  width: 50px;
   margin: 5px;
   display: inline-block;
   background-color: #efc73c;
@@ -47,14 +51,10 @@ h2:before {
   top: 50%;
   left:100%;
   height: 3px;
-  width: 70px;
+  width: 50px;
   margin: 5px;
   display: inline-block;
   background-color: #efc73c;
-}
-
-body {
-
 }
 
 .spanContact {
@@ -74,19 +74,53 @@ body {
   padding: 0 20px;
 }
 
-
-header, .aboutMe, .education, .skills {
-  height:100vh;
+header {
+  height: 100vh;
 }
 
-.aboutMe, .skills {
-
+.aboutMe, .education, .skills {
+  height:auto;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.education {
-
+.frontendSkills {
+  width:300px;
 }
 
-.hidden {
-
+.navalSkills {
+  width:300px;
 }
+
+.skillsList {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+@media screen and (min-width:640px) {
+ .aboutMe, .education, .skills {
+  height: 100vh;
+ }
+  h1 {
+    font-size: 3em;
+  }
+  h1::after {
+    width: 100px;
+    margin: 13px;
+  }
+  h1::before {
+    width: 100px;
+    margin: 13px;
+  }
+}
+
