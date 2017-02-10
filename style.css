@@ -116,7 +116,7 @@ li span {
   text-decoration:underline;
 }
 
-@media screen and (min-width:640px) {
+@media screen and (min-width:740px) {
  .aboutMe, .education, .skills {
 
  }
@@ -143,7 +143,7 @@ li span {
   }
 }
 
-@media screen and (max-width:359px) {
+@media screen and (max-width:480px) {
   h1:before, h1:after, h2:before, h2:after {
     display: none;
   }
