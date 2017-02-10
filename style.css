@@ -8,6 +8,14 @@ h1, h2, h3, h4, p {
   text-align: center;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Bungee Shade';
+}
+
+p, ul {
+  font-family: 'Bungee';
+}
+
 h1 {
   font-size: 2em;
   padding: 200px 0 50px;
@@ -57,26 +65,23 @@ h2:before {
   background-color: #efc73c;
 }
 
-.spanContact {
-  content: "dupa";
-  height: 50px;
-}
-
 .contact {
   width:300px;
   text-align: center;
   margin-left:auto;
   margin-right:auto;
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .contact img {
-  padding: 0 20px;
+  padding: 0 40px;
+  height: 25px;
 }
 
 header {
   height: 100vh;
 }
+
 
 .aboutMe, .education, .skills {
   height:auto;
@@ -107,12 +112,17 @@ ul {
   padding: 0;
 }
 
+li span {
+  text-decoration:underline;
+}
+
 @media screen and (min-width:640px) {
  .aboutMe, .education, .skills {
-  height: 100vh;
+
  }
   h1 {
     font-size: 3em;
+    padding-top: 300px;
   }
   h1::after {
     width: 100px;
@@ -122,5 +132,22 @@ ul {
     width: 100px;
     margin: 13px;
   }
+  .contact img {
+    height: 35px;
+  }
+  h2 {
+    padding: 100px 0 0;
+  }
+  p {
+    padding:30px 0;
+  }
 }
 
+@media screen and (max-width:359px) {
+  h1:before, h1:after, h2:before, h2:after {
+    display: none;
+  }
+  .contact {
+    width:200px;
+  }
+}
