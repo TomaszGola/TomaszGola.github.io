@@ -197,6 +197,73 @@
       <input type="submit" class="form-tickets-submit" name="sSubmit" value="ZGŁOŚ SIĘ"/>
     </form>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <form class="form-horizontal" id="formWiadomosc" action="zapytanie.php" method="POST">
+      <!--<div class="col-md-12 center UP">-->
+      <!--<div class="form-group">-->
+      <!--<label for="niespodziankaemailk">Pozostaw puste:</label>-->
+      <!--<input type="text" name="niespodziankaemailk" id="niespodziankaemailk" class="form-control">-->
+      <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <div class="col-md-12">
+          <input type="text"
+                 class="form-control validate[required]"
+                 placeholder="Imię"
+                 id="imie_zap"
+                 name="ContactName"
+                 required>
+          <input type="text"
+                 class="form-control validate[required] pull-right"
+                 placeholder="Nazwisko"
+                 id="nazwisko_zap"
+                 name="ContactSecondName"
+                 required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email"
+                 class="form-control validate[required, custom[email]]"
+                 placeholder="Email"
+                 id="email_zap"
+                 name="ContactEmail"
+                 required>
+          <input type="text"
+                 class="form-control pull-right"
+                 placeholder="Telefon"
+                 id="telefon_zap"
+                 name="ContactPhone"
+                 required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <textarea class="form-control validate[required]"
+                    rows="3"
+                    placeholder="Treść wiadomości"
+                    id="zapytanie_zap"
+                    name="ContactText"
+                    required>
+          </textarea>
+        </div>
+      </div>
+      <!--<div class="col-md-12 center UP">-->
+      <!--<div class="form-group">-->
+      <!--<label for="email">Pozostaw puste:</label>-->
+      <!--<input type="text" name="email" id="email" class="form-control">-->
+      <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <div class="col-sm-12 text-center">
+          <input type="submit" class="btn btn-wyslij-kon" name="send" value="Wyślij zapytanie">
+        </div>
+      </div>
+    </form>
 
   </section>
 
