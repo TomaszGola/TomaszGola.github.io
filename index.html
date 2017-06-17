@@ -30,7 +30,7 @@
 <main>
 
   <section class="aboutMe">
-    <div>
+    <div class="sc-content">
       <h2>O mnie</h2>
       <p>
         Jestem studentem Politechniki Gdańskiej na wydziale Oceantoechniki i Okrętownictwa.
@@ -42,7 +42,7 @@
   </section>
 
   <section class="education">
-    <div>
+    <div class="sc-content">
       <h2>Wykształcenie</h2>
       <h3>Politechnika Gdańska wydział Oceanotechniki i Okrętownictwa</h3>
       <h4>Studia Magisterskie</h4>
@@ -100,6 +100,104 @@
         </div>
       </div>
     </div>
+
+    <!--<div>-->
+      <!--<form action="form-to-email.php" method="post">-->
+        <!--Name: <input type="text" name="name">-->
+        <!--Email: <input type="text" name="email">-->
+        <!--<input type="submit" value="wyślij to!!!!">-->
+      <!--</form>-->
+    <!--</div>-->
+    <br/>
+    <br/>
+
+
+    <form method="post" action="form-to-email.php">
+      <div class="form-tickets clearfix">
+        <div class="form-ticket-left">
+          <div class="form-ticket-left-box">
+            <h6>DANE DO FAKTURY</h6>
+            <label>NAZWA FIRMY
+              <input type="text" name="sCompanyName" value="" required/>
+            </label>
+            <br/>
+            <label>ULICA
+              <input type="text" name="sCompanyStreet" value="" required/>
+            </label>
+            <br/>
+            <label>NR ULICY
+              <input type="text" name="sCompanyNumber1" value="" required/>
+            </label>
+            <br/>
+            <label>NR LOKALU
+              <input type="text" name="sCompanyNumber2" value=""/>
+            </label>
+            <br/>
+            <!--<div class="clearfix"></div>-->
+            <label>KOD POCZTOWY
+              <input type="text" name="sCompanyCode" value="" required/>
+            </label>
+            <br/>
+            <label>MIASTO
+              <input type="text" name="sCompanyCity" value="" required/>
+            </label>
+            <br/>
+            <!--<div class="clearfix"></div>-->
+            <label>NIP
+              <input type="text" name="sCompanyNip" value="" required/>
+            </label>
+            <br/>
+            <label>E-MAIL DO WYSŁANIA FAKTURY
+              <input type="email" name="sCompanyEmail" value="" required/>
+            </label>
+            <br/>
+          </div>
+        </div>
+        <div class="form-ticket-right">
+          <div class="form-ticket-right-box">
+            <h6>DANE UCZESTNIKÓW</h6>
+            <p>Wybierz ilość osób</p>
+
+            <select name="osoby" id="osoby_form" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10 ">10</option>
+            </select>
+
+            <p>Wybierz typ biletu</p>
+            <select name="bilety" id="bilety_form" required>
+              <option value="1-dniowy">Bilet 1-dniowy</option>
+              <option value="2-dniowy">Bilet 2-dniowy</option>
+              <option value="VIP">Bilet VIP</option>
+            </select>
+            <div class="sPersonContainer" style="margin-top:45px">
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-ticket-reg clearfix">
+          <input type="checkbox" name="iReg1" value="1" required/>
+          <p>Wyrażam zgodę</p>
+          <div class="clearfix"></div>
+          <input type="checkbox" name="iReg2" value="1"/>
+          <p>Wyrażam zgodę</p>
+          <div class="clearfix"></div>
+          <input type="checkbox" name="iReg3" value="1" required/>
+          <p>Zgłaszając uczestnictwo akceptuję <a href="http://indm.pl/regulamin.html" target="_blank">warunki
+            uczestnictwa</a> w in Digital Marketing</p>
+        </div>
+      </div>
+      <input type="submit" class="form-tickets-submit" name="sSubmit" value="ZGŁOŚ SIĘ"/>
+    </form>
+
+
   </section>
 
 </main>
